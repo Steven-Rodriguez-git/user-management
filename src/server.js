@@ -1,3 +1,4 @@
+import "dotenv/config";
 import app from "./index.js";
 import sequelize from "./config/db.js";
 
