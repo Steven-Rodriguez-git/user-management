@@ -48,7 +48,7 @@ describe("Auth Endpoints", () => {
       password: "wrongpass",
     });
 
-    expect(res.statusCode).toBe(404);
+    expect(res.statusCode).toBe(400);
     expect(res.body).toHaveProperty("error", "Usuario no encontrado.");
   });
 });

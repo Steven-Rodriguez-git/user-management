@@ -1,7 +1,6 @@
 import app from "./index.js";
 import sequelize from "./config/db.js";
 
-
 sequelize
   .sync()
   .then(() => {
