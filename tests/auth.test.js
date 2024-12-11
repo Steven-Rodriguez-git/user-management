@@ -6,6 +6,10 @@ describe("Auth Endpoints", () => {
 
     beforeAll(async () => {
       await sequelize.sync({ force: true });
+      const res = await request(app).post("/auth/register").send({
+        email: "usuariocreacion@example.com",
+        password: "123456",
+      });
     });
 
     afterAll(async () => {

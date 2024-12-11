@@ -11,7 +11,4 @@ COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app ./
 USER appuser
 EXPOSE 4000
-COPY .env ./
-COPY --from=build /usr/src/app ./
-COPY --from=build /usr/src/app/.env ./
 CMD ["node", "src/server.js"]
