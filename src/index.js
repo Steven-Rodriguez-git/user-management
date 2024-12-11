@@ -1,4 +1,3 @@
-import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes.js";
@@ -6,7 +5,7 @@ import healthRoutes from "./routes/health.routes.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
 import swaggerUi from 'swagger-ui-express';
-import swaggerFile from '../swagger_output.json' with {type: "json"}; 
+import swaggerFile from '../swagger_output.json' assert {type: "json"}; 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
